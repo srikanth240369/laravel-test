@@ -14,7 +14,7 @@ class PreviousSalesComponent extends Component
     public function render()
     {
         
-        $previous_sales = PreviousSale::latest()->get();
+        $previous_sales = PreviousSale::whereHas('product')->latest()->get();
         
         return view('livewire.previous-sales-component',compact('previous_sales'));
     }

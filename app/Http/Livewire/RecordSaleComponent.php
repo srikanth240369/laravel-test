@@ -47,6 +47,8 @@ class RecordSaleComponent extends Component
         // clear input
         $this->qty ="";
         $this->unit_cost ="";
+        $this->selectedProduct = "";
+        $this->selling_price = "";
 
         // fire an event
         $this->emit('updatePreviousSales');
